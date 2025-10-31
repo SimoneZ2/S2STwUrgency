@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo TTS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #fafafa;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .abstract {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .sample {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .text {
+            margin-bottom: 12px;
+        }
+
+        .label {
+            font-weight: bold;
+            display: block;
+            margin-top: 8px;
+        }
+
+        audio {
+            display: block;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Real-Time Speech-to-Speech Translation with
+        Urgency Preservation in Time-Sensitive Scenarios</h1>
+
+    <section class="abstract">
+        In a global society where collaboration increasingly involves speakers of different
+        languages, communication barriers remain a significant challenge. The problem
+        becomes particularly relevant in urgent scenarios, where critical information must
+        be delivered rapidly and understood correctly across speakers of different lan-
+        guages. To address this challenging issue, we introduce a multilingual framework
+        for near real-time speech-to-speech translation that explicitly detects and pre-
+        serves urgency. The system extends the cascade paradigm by integrating audio-
+        and text-based urgency recognition with urgency-aware speech synthesis, and has
+        been implemented as an open-source prototype accessible through WebRTC. As
+        a complementary contribution, we created the first multilingual dataset explicitly
+        annotated for urgency, comprising 200 recordings in English, French, German,
+        Dutch, and Italian. The framework has been evaluated through both quanti-
+        tative and qualitative analyses. Quantitatively, the system achieves an average
+        end-to-end latency below three seconds, a Word Error Rate (WER) of 8.28% for
+        non-urgent audios and 10.30% for urgent audios, BLEU scores of 0.40 and 0.33
+        respectively, and full consistency across repeated trials. Qualitatively, human
+        evaluators rated translation quality with a Mean Opinion Score (MOS) of 3.69
+        for non-urgent audios and 3.38 for urgent ones, and urgency preservation with
+        a MOS of 3.34, confirming that the intended tone was reliably perceived. These
+        results indicate that the system achieves real-time performance while maintain-
+        ing translation accuracy and effectively preserving urgency. While most current
+        solutions are offered by commercial providers and deployed on the cloud, raising
+        significant privacy concerns, our system is released open-source and can be exe-
+        cuted on premises using a mid-range server
+    </section>
+
+    <section class="sample">
+        <div class="text">
+            <span class="label">Original phrase</span>
+            <p>attention this is not a drill there is a fire in the building everyone must evacuate immediately using
+                the emergency exits i repeat leave immediately</p>
+        </div>
+        <div class="text">
+            <span class="label">Transcription</span>
+            <p>attention this is not a drill there is a fire in the building everyone must evacuate immediately using
+                the emergency exits i repeat leave immediately</p>
+        </div>
+        <div class="text">
+            <span class="label">Translation</span>
+            <p>attention ce n'est pas un exercice il y a un incendie dans le bâtiment tout le monde doit évacuer
+                immédiatement en utilisant les issues de secours que je répète quittez immédiatement</p>
+        </div>
+        <div class="text">
+            <span class="label">Original Audio:</span>
+            <audio controls src="/audio/audio_005.mp3"></audio>
+        </div>
+        <div class="text">
+            <span class="label">Translated Audio:</span>
+            <audio controls src="/audio/audio_5_output.wav"></audio>
+        </div>
+    </section>
+</body>
+
+</html>
